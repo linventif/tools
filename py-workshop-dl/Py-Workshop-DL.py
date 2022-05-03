@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import os
 
 workshop = ["-- GMOD Py Workshop-Downloader CREATOR - - Created by Linventif --"]
-#Url de la collection a fast-dl
+#Url de la collection a workshop dl
 url = "https://steamcommunity.com/sharedfiles/filedetails/?id=727825750"
 
 html_code = urlopen(url).read().decode("utf-8")
