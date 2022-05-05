@@ -7,8 +7,8 @@ file_html.close()
 for line in lines:
     line = line.replace("\"", "'")
 
-    line = f"page += \"{line}\";"
-    #line = f"client.println(\"{line}\");"
+    #line = f"page += \"{line}\";"
+    line = f"client.println(\"{line}\");"
     line = line.replace("\n", "")
 
     line = f"{line} \n"
