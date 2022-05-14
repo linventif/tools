@@ -7,7 +7,7 @@ workshop = []
 traiter = 0
 
 #Url de la collection a workshop dl
-url = "https://steamcommunity.com/sharedfiles/filedetails/?id=2717270825"
+url = "https://steamcommunity.com/sharedfiles/filedetails/?id=2767798486"
 
 html_code = urlopen(url).read().decode("utf-8")
 
@@ -20,7 +20,7 @@ addons = prod.findAll("div", class_="collectionItemDetails")
 
 
 for addon in addons:
-    print(f" - - - Nombre d'addons {len(addons)} - - - {traiter} / {len(addons)} - - - ")
+    print(f" - - - Nombre d'addons {len(addons)} - - - {traiter} / {len(addons)} - - - {round(traiter/len(addons)*100,2)}% - - - ")
     traiter += 1
 
     title_addon = addon.find("a", href_="")
@@ -28,9 +28,9 @@ for addon in addons:
 
     html_code = urlopen(url).read().decode("utf-8")
     soup = BeautifulSoup(html_code, "lxml")
-    prod = soup.find("div", class_="detailsStatRight")
+    taille = soup.find("div", class_="detailsStatRight")
 
-    workshop.append(f' {prod} -- {title_addon.get("href")} -- {title_addon.text}')
+    workshop.append(f' {taille.text} -- {title_addon.get("href")} -- {title_addon.text}')
 
 
 
