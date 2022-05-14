@@ -29,10 +29,10 @@ workshop = workshop.replace("https://steamcommunity.com/sharedfiles/filedetails/
 try:
     os.remove("workshop.lua")
     open("workshop.lua", "x")
-    with open("workshop.lua", "w") as fichier:
+    with open("workshop.lua", "w", encoding='utf8') as fichier:
         fichier.write(workshop)
 
 except IOError:
     open("workshop.lua", "x")
-    with open("workshop.lua", "w") as fichier:
+    with open("workshop.lua", "w", encoding='utf8') as fichier:
         fichier.write(workshop)
