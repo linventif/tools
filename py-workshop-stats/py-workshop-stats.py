@@ -7,7 +7,7 @@ traiter = 0
 taille = 0
 taille_total = 0.0
 
-url = "https://steamcommunity.com/sharedfiles/filedetails/?id=2397004463"
+url = "https://steamcommunity.com/sharedfiles/filedetails/?id=2837811117"
 
 html_code = urlopen(url).read().decode("utf-8")
 
